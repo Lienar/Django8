@@ -78,7 +78,7 @@ def sign_up_by_django(request):
             #if int(age) < 18:
                 #info['error'] = 'Вы должны быть старше 18'
                 #return render(request, 'registration_page.html', info)
-        Buyer.objects.create(name=name, balance=balance, password=password, age=age)
+        Buyer.objects.create(name=name, balance=balance, age=age)
         return HttpResponse(f'Приветствуем, {name}!')
 
     return render(request, 'registration_page.html', info)
