@@ -1,0 +1,17 @@
+{% extends 'menu.html' %}
+
+{% block title %} Store of tabel games {% endblock %}
+
+{% block pagename %} <h1 align="center"><b>Магазин</b></h1> {% endblock %}
+
+{% block menu %} {{ block.super }} {% endblock %}
+
+{% block space %} {{ block.super}} {% endblock %}
+
+{% block content %}
+        {% for i in list %}
+        <ul>
+            <li align="left">{{ i.title }} | {{ i.description }}  Стоймость: {{ i.cost }}    <button>Купить</button></li>
+        </ul>
+        {% endfor %}
+{% endblock %}

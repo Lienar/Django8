@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Store of tabel games {% endblock %}</title>
+</head>
+
+<body>
+    <h2> {{ error }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for = "name">Ваше имя:</label>
+        <input type = "text" id = "name" name = "name" maxlength="30" required>
+
+        <label for = "password">Введите ваш пароль:</label>
+        <input type = "text" id = "password" name = "password" minlength="8" required>
+
+        <label for = "password2">Повторите ваш пароль:</label>
+        <input type = "text" id = "password2" name= "password2" minlength="8" required>
+
+        <label for = "balance">Сколько денег вы помещаете на счет:</label>
+        <input type = "text" id = "balance" name= "balance" minlength="4" required>
+
+        <label for = "age">Введите ваш возраст::</label>
+        <input type = "number" id = "age" name = "age" maxlength="3" required>
+
+        <button type="submit"> Send</button>
+    </form>
+</body>

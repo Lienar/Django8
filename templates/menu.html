@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Store of tabel games {% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+            <h1 align="center"><b>Магазин</b> настольных <b>игр</b></h1>
+            <h1 align="center"><b>Корзина</b></h1>
+            <h1 align="center"><b>Магазин</b></h1>
+        {% endblock pagename %}
+    </header>
+
+    <space>
+        {% block space %}
+        <p> </p>
+        <p> </p>
+        {% endblock %}
+    </space>
+
+    <menu>
+        {% block menu %}
+        <p> </p>
+        <p> </p>
+        <p align="left"><h2><a href="http://127.0.0.1:8000/">Главная страница</a></h2></p>
+        <p> </p>
+        <p align="left"><h3><a href="http://127.0.0.1:8000/store/">Магазин</a></h3></p>
+        <p> </p>
+        <p align="left"><h3><a href="http://127.0.0.1:8000/basket/">Корзина</a></h3></p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        {% endblock %}
+    </menu>
+
+    <cont>
+        {% block content %}
+        <p> context </p>
+        {% endblock %}
+    </cont>
+</body>
+</html>
+
